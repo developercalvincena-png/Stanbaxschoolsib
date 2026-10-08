@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-cream: #FDFBF7;
+    --color-cream-light: #FFFCF5;
+    --color-cream-dark: #F5EFE1;
+    --color-black: #111827;
+    --color-yellow: #EAB308;
+    --color-yellow-gold: #F59E0B;
+    --color-red: #DC2626;
+    --color-red-deep: #B91C1C;
+  }
+
+  html, body {
+    overflow-x: hidden;
+    max-width: 100vw;
+  }
+
+  body {
+    background-color: #FDFBF7;
+    color: #111827;
+    font-family: 'Nunito', sans-serif;
+  }
+
+  /* Custom scrollbar matching uniform colors */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #F5EFE1;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #CA8A04;
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #B91C1C;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.25s ease-out forwards;
+}
